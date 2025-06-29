@@ -1,0 +1,24 @@
+{
+  "name": "cronflow",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npx turbo run dev",
+    "build": "npx turbo run build",
+    "lint": "npx turbo run lint",
+    "type-check": "npx turbo run type-check",
+    "dev:shared": "npm run dev --workspace=@cronflow/shared",
+    "dev:backend": "npm run dev --workspace=@cronflow/backend",
+    "dev:frontend": "npm run dev --workspace=@cronflow/frontend",
+    "build:shared": "npm run build --workspace=@cronflow/shared",
+    "build:backend": "npm run build --workspace=@cronflow/backend",
+    "build:frontend": "npm run build --workspace=@cronflow/frontend"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.4"
+  }
+}
